@@ -41,7 +41,7 @@ for (var i = 1; i <= 20; i++) {
 
 function setImageBackground() {
   var randomIndex = Math.floor(Math.random() * imageURLs.length);
-  document.body.style.backgroundImage = 'url(' + imageURLs[randomIndex] + ')';
+  document.body.style.backgroundImage = "url('" + imageURLs[randomIndex] + "')";
 }
 
 window.onload = function() {

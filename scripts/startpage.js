@@ -31,10 +31,6 @@ function getRandomMessage() {
   return messages[randomIndex];
 }
 
-function handleImageError() {
-  console.error("Image not found or failed to load. Check the imageURLs array and ensure the images are in the correct folder.");
-}
-
 var repoName = 'https://onlineinternet.github.io/rpgstart';
 var imageURLs = [];
 

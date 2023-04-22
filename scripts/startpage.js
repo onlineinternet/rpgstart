@@ -31,12 +31,12 @@ function getRandomMessage() {
   return messages[randomIndex];
 }
 
-var repoName = '/rpgstart';
+// var repoName = '/rpgstart';
 var imageURLs = [];
 
 for (var i = 1; i <= 20; i++) {
   var formattedNumber = ('0' + i).slice(-2);
-  imageURLs.push(repoName + '/images/campfire' + formattedNumber + '.gif');
+  imageURLs.push('/images/campfire' + formattedNumber + '.gif');
 }
 
 function setImageBackground() {

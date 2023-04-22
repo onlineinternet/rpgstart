@@ -31,12 +31,12 @@ function getRandomMessage() {
   return messages[randomIndex];
 }
 
-// var repoName = '/rpgstart';
+var repoName = 'https://onlineinternet.github.io/rpgstart';
 var imageURLs = [];
 
 for (var i = 1; i <= 20; i++) {
   var formattedNumber = ('0' + i).slice(-2);
-  imageURLs.push('/images/campfire' + formattedNumber + '.gif');
+  imageURLs.push(repoName + '/images/campfire' + formattedNumber + '.gif');
 }
 
 function setImageBackground() {
@@ -50,6 +50,6 @@ window.onload = function() {
   // Set the random message
   var messageElem = document.querySelector("#random-message");
   if (messageElem) {
-    messageElem.innerText = getRandomMessage(); // Use innerText instead of calling the function
+    messageElem.innerText = getRandomMessage();
   }
 };

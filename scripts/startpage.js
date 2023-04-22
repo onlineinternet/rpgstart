@@ -36,7 +36,7 @@ var imageURLs = [];
 
 for (var i = 1; i <= 20; i++) {
   var formattedNumber = ('0' + i).slice(-2);
-  imageURLs.push(rpgstart + '/images/campfire' + formattedNumber + '.gif');
+  imageURLs.push(repoName + '/images/campfire' + formattedNumber + '.gif');
 }
 
 function setImageBackground() {

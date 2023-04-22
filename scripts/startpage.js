@@ -31,6 +31,10 @@ function getRandomMessage() {
   return messages[randomIndex];
 }
 
+function handleImageError() {
+  console.error("Image not found or failed to load. Check the imageURLs array and ensure the images are in the correct folder.");
+}
+
 var repoName = 'https://onlineinternet.github.io/rpgstart';
 var imageURLs = [];
 
@@ -41,7 +45,14 @@ for (var i = 1; i <= 20; i++) {
 
 function setImageBackground() {
   var randomIndex = Math.floor(Math.random() * imageURLs.length);
-  document.body.style.backgroundImage = "url('" + imageURLs[randomIndex] + "')";
+  var imageUrl = imageURLs[randomIndex];
+  
+  var img = new Image();
+  img.onload = function() {
+    document.body.style.backgroundImage = "url('" + imageUrl + "')";
+  };
+  img.onerror = handleImageError;
+  img.src = imageUrl;
 }
 
 window.onload = function() {

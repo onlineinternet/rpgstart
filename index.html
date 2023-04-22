@@ -2,42 +2,12 @@
 <html>
   <head>
     <link rel="stylesheet" href="styles/startpage.css">
+    <script src="scripts/startpage.js"></script>
     <title>Welcome back, traveler.</title>
   </head>
   <body>
-    <center>
-<script type="text/javascript">
-  var imageURLs = [
-       "campfire01.gif"
-     , "campfire02.gif"
-     , "campfire03.gif"
-     , "campfire04.gif"
-     , "campfire05.gif"
-     , "campfire06.gif"
-     , "campfire07.gif"
-     , "campfire08.gif"
-     , "campfire09.gif"
-     , "campfire10.gif"
-     , "campfire11.gif"
-     , "campfire12.gif"
-     , "campfire13.gif"
-     , "campfire14.gif"
-     , "campfire15.gif"
-  ];
-  function getImageTag() {
-    var img = '<body style=\"background-image:url(';
-    var randomIndex = Math.floor(Math.random() * imageURLs.length);
-    img += imageURLs[randomIndex];
-    img += ')\"';
-    return img;
-  }
-</script>
-<script type="text/javascript">
-  document.write(getImageTag());
-</script>
     <div class="content">
-    <p>Rest here a while before journeying to your next site.</p>
+      <p id="random-message"></p>
     </div>
-</center>
   </body>
 </html>

@@ -31,7 +31,7 @@ function getRandomMessage() {
   return messages[randomIndex];
 }
 
-var repoName = 'onlineinternet.github.io/rpgstart';
+var repoName = 'https://onlineinternet.github.io/rpgstart';
 var imageURLs = [];
 
 for (var i = 1; i <= 20; i++) {

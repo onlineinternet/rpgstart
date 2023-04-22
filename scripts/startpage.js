@@ -43,20 +43,16 @@ for (var i = 1; i <= 20; i++) {
   imageURLs.push(repoName + '/images/campfire' + formattedNumber + '.gif');
 }
 
-function setImageBackground() {
+function loadBackgroundImage() {
   var randomIndex = Math.floor(Math.random() * imageURLs.length);
   var imageUrl = imageURLs[randomIndex];
-  
-  var img = new Image();
-  img.onload = function() {
-    document.body.style.backgroundImage = "url('" + imageUrl + "')";
-  };
-  img.onerror = handleImageError;
+
+  var img = document.getElementById("bg-image");
   img.src = imageUrl;
 }
 
 window.onload = function() {
-  setImageBackground();
+  loadBackgroundImage();
 
   // Set the random message
   var messageElem = document.querySelector("#random-message");
